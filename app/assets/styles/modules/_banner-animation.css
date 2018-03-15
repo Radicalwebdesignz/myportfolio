@@ -1,0 +1,238 @@
+/* Animation One */
+
+.animate-one span {
+	display: inline-block;
+}
+.animate-one span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate-one span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate-one span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate-one span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate-one span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate-one span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate-one span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+
+.animate-one span {
+	color: #fff;
+	opacity: 0;
+	transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+	animation: revolveScale .4s forwards;
+}
+
+@keyframes revolveScale {
+	60% {
+		transform: translate(20px, 20px) rotate(30deg) scale(.3);
+		color:$mainGreen;
+	}
+
+	100% {
+		transform: translate(0) rotate(0) scale(1);
+		opacity: 1;
+		color:$mainRed;
+	}
+}
+
+/* Animation Twoe */
+
+.animate-two span {
+	display: inline-block;
+}
+.animate-two span:nth-of-type(1) {
+	animation-delay: .35s;
+}
+.animate-two span:nth-of-type(2) {
+	animation-delay: .4s;
+}
+.animate-two span:nth-of-type(3) {
+	animation-delay: .45s;
+}
+.animate-two span:nth-of-type(4) {
+	animation-delay: .5s;
+}
+.animate-two span:nth-of-type(5) {
+	animation-delay: .55s;
+}
+.animate-two span:nth-of-type(6) {
+	animation-delay: .6s;
+}
+.animate-two span:nth-of-type(7) {
+	animation-delay: .65s;
+}
+.animate-two span:nth-of-type(8) {
+	animation-delay: .7s;
+}
+.animate-two span:nth-of-type(9) {
+	animation-delay: .75s;
+}
+.animate-two span:nth-of-type(10) {
+	animation-delay: .8s;
+}
+.animate-two span:nth-of-type(11) {
+	animation-delay: .85s;
+}
+.animate-two span:nth-of-type(12) {
+	animation-delay: .9s;
+}
+.animate-two span:nth-of-type(13) {
+	animation-delay: .95s;
+}
+.animate-two span:nth-of-type(14) {
+	animation-delay: 1s;
+}
+.animate-two span:nth-of-type(15) {
+	animation-delay: 1.05s;
+}
+.animate-two span:nth-of-type(16) {
+	animation-delay: 1.1s;
+}
+.animate-two span:nth-of-type(17) {
+	animation-delay: 1.15s;
+}
+.animate-two span:nth-of-type(18) {
+	animation-delay: 1.2s;
+}
+.animate-two span:nth-of-type(19) {
+	animation-delay: 1.25s;
+}
+.animate-two span:nth-of-type(19) {
+	animation-delay: 1.3s;
+}
+.animate-two span:nth-of-type(20) {
+	animation-delay: 1.35s;
+}
+.animate-two span:nth-of-type(21) {
+	animation-delay: 1.4s;
+}
+.animate-two span:nth-of-type(22) {
+	animation-delay: 1.45s;
+}
+.animate-two span:nth-of-type(23) {
+	animation-delay: 1.5s;
+}
+.animate-two span:nth-of-type(24) {
+	animation-delay: 1.55s;
+}
+.animate-two span:nth-of-type(25) {
+	animation-delay: 1.6s;
+}
+
+.animate-two span {
+	color: #fff;
+	opacity: 0;
+	transform: translate(-300px, 0) scale(0);
+	animation: sideSlide .5s forwards;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #fff;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #fff;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: $mainRed;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #fff;
+	}
+}
+
+/* Animation Three */
+
+.animate-three span {
+	color: #fff;
+	opacity: 0;
+	transform: translate(200px, -100px) scale(2);
+	animation: ballDrop .3s forwards;
+}
+
+@keyframes ballDrop {
+	60% {
+		transform: translate(0, 20px) rotate(-180deg) scale(.5);
+		color: $mainRed;
+	}
+
+	100% {
+		transform: translate(0) rotate(0deg) scale(1);
+		opacity: 1;
+		color: #fff;
+	}
+}
+
+.animate-three span {
+	display: inline-block;
+}
+.animate-three span:nth-of-type(1) {
+	animation-delay: 2s;
+}
+.animate-three span:nth-of-type(2) {
+	animation-delay: 2.1s;
+}
+.animate-three span:nth-of-type(3) {
+	animation-delay: 2.2s;
+}
+.animate-three span:nth-of-type(4) {
+	animation-delay: 2.3s;
+}
+.animate-three span:nth-of-type(5) {
+	animation-delay: 2.4s;
+}
+.animate-three span:nth-of-type(6) {
+	animation-delay: 2.5s;
+}
+.animate-three span:nth-of-type(7) {
+	animation-delay: 2.6s;
+}
+.animate-three span:nth-of-type(8) {
+	animation-delay: 2.7s;
+}
+.animate-three span:nth-of-type(9) {
+	animation-delay: 2.8s;
+}
+.animate-three span:nth-of-type(10) {
+	animation-delay: 2.9s;
+}
+.animate-three span:nth-of-type(11) {
+	animation-delay: 3s;
+}
+
+/* Animation Four */
+
+.animate-four {
+	animation: fadein 4s ease-in;
+}
+
+@keyframes fadein{
+	0% {
+		opacity:0;
+	}
+	80% {
+		opacity:0;
+	}
+	100% {
+		transform: translate(0) rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}

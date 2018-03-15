@@ -1,0 +1,87 @@
+.banner {
+	background: url(../images/banner.jpeg) no-repeat;
+	background-size: cover;
+	position: relative;
+	height:600px;
+
+	.overlay {
+		background-color: rgba($mainGreen, 0.8);
+		height:600px;
+	}
+}
+
+.btn-color {
+	border:1px solid $mainRed;
+}
+
+.btn-color:hover {
+	background-color: $mainRed;
+	color:#fff;
+	border:1px solid $mainRed;
+}
+
+.animate-one, .animate-two, .animate-three, .animate-4 {
+	transition: all 1s cubic-bezier(.13,.22,.01,1.07);
+}
+
+.animate-4 {
+	position: relative;
+	z-index:-1;
+}
+.animate-one span {
+	font-size: 2.5rem;
+	@mixin atMedium {
+		font-size: 5rem;
+	}
+}
+
+.animate-two span {
+	font-size: 1rem;
+	@mixin atMedium {
+		font-size: 1.75rem;
+	}
+}
+
+.animate-three span {
+	font-size: 1.5rem;
+	@mixin atMedium {
+		font-size: 1.75rem;
+	}
+}
+
+.btn-color {
+	font-size: 1.25rem;
+}
+
+.btn-color {
+  	border: 1px solid;
+  	overflow: hidden;
+  	position: relative;
+  
+  	span {
+   	 	z-index: 20;
+  	}
+  
+  	&:after {
+    	background: #fff;
+   		content: "";
+    	height: 155px;
+    	left: -75px;
+    	opacity: .2;
+    	position: absolute;
+    	top: -50px;
+    	transform: rotate(35deg);
+    	transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    	width: 50px;
+    	z-index: -10;
+  	}
+}
+
+.btn-color:hover {
+  
+  	&:after {
+    	left: 120%;
+    	transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  	}
+}
+
