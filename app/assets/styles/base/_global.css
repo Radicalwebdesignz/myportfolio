@@ -29,3 +29,19 @@ h1,h2,h3,h4,h5,h6 {
 .bg-green {
 	background-color: $mainGreen;
 }
+
+.bg-secBlack {
+	background-color: $secBlack;
+}
+
+.txt-black {
+	color:$mainBlack;
+}
+
+.txt-secBlack {
+	color:$secBlack;
+}
+
+.icon-color, .txt-red {
+	color: $mainRed;
+}

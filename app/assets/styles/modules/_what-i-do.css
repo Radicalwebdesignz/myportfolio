@@ -1,0 +1,12 @@
+.what-i-do {
+	background: url("../images/aboutme.jpg") no-repeat center center;
+	background-size: cover;
+	position: relative;
+	height:auto;
+
+	.overlay {
+		background-color: rgba($mainBlack, 0.75);
+		height:auto;
+	}
+
+}

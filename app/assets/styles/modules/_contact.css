@@ -1,0 +1,12 @@
+.contact {
+	&-image {
+		position: relative;
+	}
+
+	&-image--position {
+		position: relative;
+		top:50%;
+		transform: translateY(-50%);
+	}
+
+}

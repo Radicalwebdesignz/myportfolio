@@ -9,3 +9,8 @@
 @import "modules/_navbar";
 @import "modules/_banner";
 @import "modules/_banner-animation";
+@import "modules/_workflow";
+@import "modules/_what-i-do";
+@import "modules/_projects";
+@import "modules/_contact";
+@import "modules/_footer";
