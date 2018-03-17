@@ -6,11 +6,11 @@
         $name = strip_tags(trim($_POST["name"]));
 		$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $subject = trim($_POST["subject"]);
         $message = trim($_POST["message"]);
+        $sub = trim($_POST["subject"]);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR empty($subject) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($sub) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
@@ -21,18 +21,19 @@
         $recipient = "manohar.webdev@gmail.com";
 
         // Set the email subject.
-        $sub = "New contact from $name";
+        $subject = "New contact from $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Message:\n$message\n";
+        $email_content .= "Email: $email\n";
+        $email_content .= "Subject: $sub\n";
+        $email_content .= "Message:\n$message\n\n";
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
 
         // Send the email.
-        if (mail($sub, $recipient, $subject, $email_content, $email_headers)) {
+        if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
