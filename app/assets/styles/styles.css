@@ -7283,10 +7283,10 @@ header .nav-toggler {
 }
 	}
 .bg-green--nav {
-	background-color: rgba(1,96,82, 0.75);
+	background-color: rgba(1,96,82, 0.9);
 }
 .bg-green--nav-scroll {
-  background-color: rgba(1,96,82, 0.75);
+  background-color: rgba(1,96,82, 0.9);
 }
 .navbar {
   transition: all 1s ease;

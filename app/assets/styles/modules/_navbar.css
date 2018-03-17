@@ -117,11 +117,11 @@ header .nav-toggler {
 }
 
 .bg-green--nav {
-	background-color: rgba($mainGreen, 0.75);
+	background-color: rgba($mainGreen, 0.9);
 }
 
 .bg-green--nav-scroll {
-  background-color: rgba($mainGreen, 0.75);
+  background-color: rgba($mainGreen, 0.9);
 }
 
 .navbar {
