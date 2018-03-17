@@ -7162,6 +7162,9 @@ h1,h2,h3,h4,h5,h6 {
 .icon-color, .txt-red {
 	color: #d24d57;
 }
+.active {
+	border-bottom:2px solid #fff;
+}
 .navbar-link {
 	color: #fff !important;
 	transition: all .2s cubic-bezier(.47,.07,.21,1.4).1s;
@@ -7265,11 +7268,17 @@ header .nav-toggler {
 		height:inherit
 }
 	}
-.bg-red--nav {
-	background-color: rgba(210,77,87, 0.75);
+.bg-green--nav {
+	background-color: rgba(1,96,82, 0.75);
+}
+.bg-green--nav-scroll {
+  background-color: rgba(1,96,82, 0.75);
+}
+.navbar {
+  transition: all 1s ease;
 }
 .banner {
-	background: url(../images/banner.jpeg) no-repeat;
+	background: url(../images/banner.jpeg) repeat;
 	background-size: cover;
 	position: relative;
 	height:600px;
@@ -7697,16 +7706,32 @@ header .nav-toggler {
 		opacity: 1;
 	}
 }
+.workflow_content {
+		text-align: justify;
+	}
 .what-i-do {
-	background: url("../images/aboutme.jpg") no-repeat center center;
+	background: url("../images/aboutme.jpg") repeat center center;
 	background-size: cover;
+	width:100%;
 	position: relative;
 	height:auto;
 
 }
 .what-i-do .overlay {
-		background-color: rgba(30,30,30, 0.75);
+		background-color: rgba(1,96,82, 0.9);
 		height:auto;
+	}
+.what-i-do--content {
+		text-align: justify;
+		padding-left:2rem; 
+		padding-right:2rem;
+		
+	}
+@media (min-width:768px) {
+.what-i-do--content {
+			text-align: center
+		
+	}
 	}
 .box{
     text-align: center;
@@ -7714,7 +7739,6 @@ header .nav-toggler {
     position: relative;
 }
 .box img{
-    width: 100%;
     height: 250px;
 }
 .box:before,
@@ -7827,9 +7851,6 @@ header .nav-toggler {
     .box .description{ margin: 7px 0; }
     .box .read-more{ padding: 7px 0; }
 }
-.projects .border {
-    border: 1px solid black;
-}
 .contact-image {
 		position: relative;
 	}
@@ -7842,3 +7863,87 @@ header .nav-toggler {
 .footer .social-icons {
 		font-size: 1rem;
 	}
+.come-in {
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+    -webkit-animation: come-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: come-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+}
+.come-in:nth-child(odd) {
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s; 
+}
+.already-visible {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation: none;
+            animation: none; 
+}
+@-webkit-keyframes come-in {
+    to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); 
+    } 
+}
+@keyframes come-in {
+    to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); 
+    } 
+}
+.reveal-item {
+	opacity: 0;
+	transition:all 1.5s ease-out;
+	-webkit-transform: scale(0.5);
+	        transform: scale(0.5);
+
+}
+.reveal-item--is-visible {
+		opacity: 1;
+		-webkit-transform:scale(1);
+		        transform:scale(1);
+	}
+.scrolltop {
+    display:none;
+    width:100%;
+    margin:0 auto;
+    position:fixed;
+    bottom:20px;
+    right:10px;
+    z-index:2;
+      /*Added Z-index so that it till be visible in all layers- adjust if needed*/
+}
+.scroll {
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    background:#b2b2b2;
+    background:#d24d57;
+    padding:10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor:pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;        
+}
+.scroll:hover {
+    background: rgba(210,77,87, 0.75);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;        
+}
+.scroll:hover .fa {
+    padding-top:-10px;
+}
+.scroll .fa {
+    font-size:30px;
+    color:#fff;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;    
+}

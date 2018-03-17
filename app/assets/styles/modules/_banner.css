@@ -1,5 +1,5 @@
 .banner {
-	background: url(../images/banner.jpeg) no-repeat;
+	background: url(../images/banner.jpeg) repeat;
 	background-size: cover;
 	position: relative;
 	height:600px;

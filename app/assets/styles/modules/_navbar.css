@@ -116,6 +116,14 @@ header .nav-toggler {
 	}
 }
 
-.bg-red--nav {
-	background-color: rgba($mainRed, 0.75);
+.bg-green--nav {
+	background-color: rgba($mainGreen, 0.75);
+}
+
+.bg-green--nav-scroll {
+  background-color: rgba($mainGreen, 0.75);
+}
+
+.navbar {
+  transition: all 1s ease;
 }

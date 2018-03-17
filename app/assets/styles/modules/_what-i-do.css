@@ -1,12 +1,23 @@
 .what-i-do {
-	background: url("../images/aboutme.jpg") no-repeat center center;
+	background: url("../images/aboutme.jpg") repeat center center;
 	background-size: cover;
+	width:100%;
 	position: relative;
 	height:auto;
 
 	.overlay {
-		background-color: rgba($mainBlack, 0.75);
+		background-color: rgba($mainGreen, 0.9);
 		height:auto;
+	}
+
+	&--content {
+		text-align: justify;
+		padding-left:2rem; 
+		padding-right:2rem; 
+		@mixin atMedium {
+			text-align: center;
+		}
+		
 	}
 
 }

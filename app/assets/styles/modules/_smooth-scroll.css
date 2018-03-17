@@ -1,0 +1,44 @@
+.scrolltop {
+    display:none;
+    width:100%;
+    margin:0 auto;
+    position:fixed;
+    bottom:20px;
+    right:10px;
+    z-index:2;
+      /*Added Z-index so that it till be visible in all layers- adjust if needed*/
+}
+.scroll {
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    background:#b2b2b2;
+    background:$mainRed;
+    padding:10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor:pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;        
+}
+.scroll:hover {
+    background:rgba($mainRed, 0.75);
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;        
+}
+.scroll:hover .fa {
+    padding-top:-10px;
+}
+.scroll .fa {
+    font-size:30px;
+    color:#fff;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;    
+}
