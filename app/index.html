@@ -317,21 +317,22 @@
                 </div>
                 <div class="col-md-6 p-5">
                     <h3 class="pb-4 text-center text-white">Feel free to ask me any questions.</h3>
-                    <form action="mailer.php" id-"ajax-contact">
+                    <div id="form-messages" class="small"></div>
+                    <form action="mailer.php" method="POST" id="ajax-contact">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Name" class="form-control" required="">
+                            <input type="text" id="name" name="name" placeholder="Name *" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" class="form-control" required="">
+                            <input type="email" id="email" name="email" placeholder="Email *" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="Subject" placeholder="Subject" class="form-control" required="">
+                            <input type="text" id="subject" name="Subject" placeholder="Subject *" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Message" name="message"></textarea>
+                            <textarea class="form-control" id="message" placeholder="Message" name="message"></textarea>
                         </div>
                         <div class="form-group text-center">
-                            <button class="btn btn-outline-light">Contact Me</button>
+                            <button type="submit" id="submit" name="submit" class="btn btn-outline-light">Contact Me</button>
                         </div>
                     </form>
                 </div
@@ -362,6 +363,7 @@
     <script src="assets/scripts/jquery.paroller.js"></script>
     <script src="assets/scripts/navbar-fixed.js"></script>
     <script src="assets/scripts/lazysizes.min.js"></script>
+    <script src="assets/scripts/mailer.js"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 </html>    

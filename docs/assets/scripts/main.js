@@ -3,7 +3,7 @@ $(document).ready(function(){
 	// Nav link underline on hover & navbar bg color
 	$('#nav-icon1').click(function(){
 		$(this).toggleClass('open');
-		$(".navbar").toggleClass('bg-red--nav');
+		$(".navbar").toggleClass('bg-green--nav');
 	});
 
 	// Fade banner content on scroll
@@ -58,54 +58,98 @@ $(document).ready(function(){
 	});
 });
 
-$(document).ready(function() {
+// Reveal Items on scroll
 
-  var curPage = 1;
-  var numOfPages = $(".skw-page").length;
-  var animTime = 1000;
-  var scrolling = false;
-  var pgPrefix = ".skw-page-";
+$('.waypoint').each(function() {
+    var $el = $(this);
+    var waypoint = new Waypoint({
+    element: $el,
+    handler: function() {
+        $el.addClass("reveal-item--is-visible");
+    },
+    offset:"75%"
+    });
+});
 
-  function pagination() {
-    scrolling = true;
+$(".lazyload").on("load", function() {
+    Waypoint.refreshAll();
+});
 
-    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
-    $(pgPrefix + (curPage - 1)).addClass("inactive");
-    $(pgPrefix + (curPage + 1)).removeClass("active");
+// From Bottom up on scroll
 
-    setTimeout(function() {
-      scrolling = false;
-    }, animTime);
+(function($) {
+
+  	$.fn.visible = function(partial) {
+    
+	  	var $t            = $(this),
+    	$w            = $(window),
+      	viewTop       = $w.scrollTop(),
+      	viewBottom    = viewTop + $w.height(),
+      	_top          = $t.offset().top,
+      	_bottom       = _top + $t.height(),
+      	compareTop    = partial === true ? _bottom : _top,
+      	compareBottom = partial === true ? _top : _bottom;
+    
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
   };
+    
+})(jQuery);
 
-  function navigateUp() {
-    if (curPage === 1) return;
-    curPage--;
-    pagination();
-  };
+var win = $(window);
 
-  function navigateDown() {
-    if (curPage === numOfPages) return;
-    curPage++;
-    pagination();
-  };
+var allMods = $(".module");
 
-  $(document).on("mousewheel DOMMouseScroll", function(e) {
-    if (scrolling) return;
-    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-      navigateUp();
-    } else { 
-      navigateDown();
+allMods.each(function(i, el) {
+  	var el = $(el);
+  	if (el.visible(true)) {
+    	el.addClass("already-visible"); 
+  	} 
+});
+
+win.scroll(function(event) {
+  
+  	allMods.each(function(i, el) {
+    	var el = $(el);
+    	if (el.visible(true)) {
+      	el.addClass("come-in"); 
+    	} 
+  	});
+  
+});
+
+// initialize paroller.js 
+$('window').paroller();
+// initialize paroller.js and set attributes 
+$(".parallor").paroller({ factor: '-0.3', type: 'background', direction: 'horizontal'});
+$(".banner-parallor").paroller({ factor: '-0.3', type: 'background', direction: 'vertical'});
+
+// Smooth Scroll
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50 ) {
+        $('.scrolltop:hidden').stop(true, true).fadeIn();
+    } else {
+        $('.scrolltop').stop(true, true).fadeOut();
     }
-  });
+});
 
-  $(document).on("keydown", function(e) {
-    if (scrolling) return;
-    if (e.which === 38) {
-      navigateUp();
-    } else if (e.which === 40) {
-      navigateDown();
-    }
-  });
+$(function(){
+    $(".scroll").click(function(){
+        $("html,body").animate({scrollTop:$("body").offset().top},"1000");
+        return false
+    })
+});
 
+// On scroll navbar background
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 500) {
+            $(".nav-color").addClass("bg-green--nav-scroll");
+        }
+        else {
+            $(".nav-color").removeClass("bg-green--nav-scroll");
+        }
+        
+    });
 });

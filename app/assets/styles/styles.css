@@ -7165,6 +7165,20 @@ h1,h2,h3,h4,h5,h6 {
 .active {
 	border-bottom:2px solid #fff;
 }
+.success {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: #fff;
+  padding:0.25rem;
+  border:1px solid #fff;
+}
+.error {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: red;
+  padding:0.25rem;
+  border:1px solid red;
+}
 .navbar-link {
 	color: #fff !important;
 	transition: all .2s cubic-bezier(.47,.07,.21,1.4).1s;
